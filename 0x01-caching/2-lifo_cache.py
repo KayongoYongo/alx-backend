@@ -6,12 +6,18 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LIFOCache(BaseCaching):
     """LIFOCache"""
+
     def __init__(self):
         """Initializes the LIFO caching"""
         super().__init__()
 
     def put(self, key, item):
-        """Assigns the dictionary self.cache_data to the key."""
+        """Assigns the dictionary self.cache_data to the key.
+
+            Args:
+                key: The key item
+                item: The value item
+        """
         if key is None or item is None:
             pass
         else:
@@ -24,7 +30,11 @@ class LIFOCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
-        """Returns the self cache data value linked to key"""
+        """Returns the self cache data value linked to key
+
+            Args:
+                key:the key item
+        """
         if key is None or self.cache_data.get(key) is None:
             return None
         else:
