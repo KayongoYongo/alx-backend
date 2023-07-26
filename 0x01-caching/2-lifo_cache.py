@@ -5,7 +5,12 @@ from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """LIFOCache"""
+    """A class that impliments the LIFOCache
+
+    Methods
+    ------
+    put
+    """
 
     def __init__(self):
         """Initializes the LIFO caching"""
