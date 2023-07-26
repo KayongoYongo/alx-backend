@@ -5,6 +5,12 @@ from base_caching import BaseCaching
 
 
 class LRUCache(BaseCaching):
+    """
+    A class that impliments the LRUCache algorithm
+
+    Methods
+    ------
+    """
     def __init__(self):
         # Call the parent class's init method
         super().__init__()
