@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """FIFO Caching"""
 
-BaseCaching = __import__('base_caching').BaseCaching
+from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
@@ -37,5 +37,3 @@ class LIFOCache(BaseCaching):
         """
         if key is None or self.cache_data.get(key) is None:
             return None
-        else:
-            return self.cache_data[key]
