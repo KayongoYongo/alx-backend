@@ -7,7 +7,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 class LIFOCache(BaseCaching):
     """LIFOCache"""
     def __init__(self):
-        """Initializes the FIFO caching"""
+        """Initializes the LIFO caching"""
         super().__init__()
 
     def put(self, key, item):
@@ -17,7 +17,8 @@ class LIFOCache(BaseCaching):
         else:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS \
                     and key not in self.cache_data.keys():
-                last_key, last_value = self.cache_data.popitem()
+                last_key = next(reversed(self.cache_data))
+                del self.cache_data[last_key]
                 print("DISCARD: {}". format(last_key))
 
             self.cache_data[key] = item
