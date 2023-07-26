@@ -3,6 +3,7 @@
 from collections import OrderedDict
 from base_caching import BaseCaching
 
+
 class MRUCache(BaseCaching):
     """A class that impliments the MRU algorithm
 
