@@ -4,6 +4,11 @@ from collections import OrderedDict
 from base_caching import BaseCaching
 
 class MRUCache(BaseCaching):
+    """A class that impliments the MRU algorithm
+
+    Methods
+    -------
+    """
     def __init__(self):
         # Call the parent class's init method
         super().__init__()
