@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""FIFO Caching"""
+"""This class impliments the FIFO Caching"""
 
 from base_caching import BaseCaching
 
